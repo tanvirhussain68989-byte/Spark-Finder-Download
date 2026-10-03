@@ -16,68 +16,67 @@
       background-color: #0f172a;
       color: #f8fafc;
       line-height: 1.6;
-      padding-bottom: 50px;
+      padding-bottom: 40px;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 600px; /* মোবাইলের জন্য অপটিমাইজড */
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 16px;
     }
 
-    /* 1. Header Banner */
+    /* ১. ব্যানার (820 x 360 Ratio) */
     .banner-container {
-      position: relative;
       width: 100%;
-      height: 220px;
-      background: linear-gradient(135deg, #3b82f6 0%, #1e1b4b 100%);
-      border-radius: 0 0 24px 24px;
+      aspect-ratio: 820 / 360;
+      background-color: #1e293b;
       overflow: hidden;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      border-radius: 0 0 16px 16px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     }
 
     .banner-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
 
-    /* 2. Main App Header Profile */
+    /* ২. ব্যানারের নিচে অ্যাপ হেডার ও নাম */
     .app-header {
       display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      gap: 24px;
-      margin-top: -60px;
-      margin-bottom: 30px;
-      position: relative;
-      z-index: 10;
+      align-items: center;
+      gap: 16px;
+      margin-top: 20px;
+      margin-bottom: 24px;
+      padding: 0 4px;
     }
 
+    /* অ্যাপ আইকন (কোথাও কাটা পড়বে না) */
     .app-icon {
-      width: 130px;
-      height: 130px;
-      border-radius: 28px;
-      object-fit: cover;
-      background: #1e293b;
-      border: 4px solid #0f172a;
-      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+      width: 85px;
+      height: 85px;
+      object-fit: contain; /* আইকন কাটা যাবে না */
+      border-radius: 18px;
+      background-color: transparent;
+      flex-shrink: 0;
     }
 
     .app-title-container {
       flex: 1;
-      min-width: 250px;
     }
 
     .app-name {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 800;
       color: #ffffff;
+      line-height: 1.2;
       margin-bottom: 4px;
     }
 
     .developer-tag {
-      font-size: 15px;
+      font-size: 13px;
       color: #38bdf8;
       font-weight: 600;
       margin-bottom: 8px;
@@ -85,81 +84,78 @@
 
     .badge-list {
       display: flex;
-      gap: 10px;
+      gap: 6px;
       flex-wrap: wrap;
     }
 
     .badge {
       background: rgba(255, 255, 255, 0.1);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      color: #94a3b8;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      color: #cbd5e1;
     }
 
-    /* 3. Big Download Section */
+    /* ৩. ডাউনলোড বাটন */
     .download-card {
       background: #1e293b;
       border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 35px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
     .download-btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      gap: 10px;
       width: 100%;
       background: linear-gradient(135deg, #10b981 0%, #059669 100%);
       color: #ffffff;
-      padding: 18px;
-      border-radius: 16px;
+      padding: 16px;
+      border-radius: 12px;
       text-decoration: none;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 700;
-      box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
-      transition: all 0.3s ease;
+      box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
+      transition: background 0.2s;
     }
 
-    .download-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 25px rgba(16, 185, 129, 0.5);
-      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    .download-btn:active {
+      transform: scale(0.98);
     }
 
     .download-btn svg {
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
     }
 
     .file-meta {
       display: flex;
       justify-content: space-around;
-      margin-top: 16px;
-      font-size: 13px;
+      margin-top: 14px;
+      font-size: 12px;
       color: #94a3b8;
-      text-align: center;
     }
 
-    /* Content Box Styling */
+    /* কন্টেন্ট বক্স */
     .section-title {
-      font-size: 20px;
+      font-size: 17px;
       font-weight: 700;
       color: #f1f5f9;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .section-title::before {
       content: '';
       display: inline-block;
       width: 4px;
-      height: 20px;
+      height: 16px;
       background: #38bdf8;
       border-radius: 2px;
     }
@@ -167,22 +163,21 @@
     .content-box {
       background: #1e293b;
       border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 35px;
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 24px;
     }
 
-    /* Policy List */
     .policy-list {
       list-style: none;
     }
 
     .policy-list li {
       position: relative;
-      padding-left: 28px;
-      margin-bottom: 12px;
+      padding-left: 22px;
+      margin-bottom: 10px;
       color: #cbd5e1;
-      font-size: 15px;
+      font-size: 14px;
     }
 
     .policy-list li::before {
@@ -194,59 +189,88 @@
       font-weight: bold;
     }
 
-    /* Tutorial Section */
     .step-list {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
     }
 
     .step-item {
       display: flex;
       align-items: flex-start;
-      gap: 14px;
+      gap: 12px;
       background: rgba(15, 23, 42, 0.6);
-      padding: 14px 16px;
-      border-radius: 12px;
+      padding: 12px;
+      border-radius: 10px;
     }
 
     .step-number {
       background: #38bdf8;
       color: #0f172a;
       font-weight: 700;
-      width: 26px;
-      height: 26px;
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 14px;
+      font-size: 12px;
       flex-shrink: 0;
     }
 
     .step-text {
-      font-size: 14px;
+      font-size: 13px;
       color: #cbd5e1;
+    }
+
+    /* ৪. ব্যানারে ক্লিক করলে ফুল ইমেজ পপআপ দেখানোর স্টাইল */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 95%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #fff;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
     footer {
       text-align: center;
       color: #64748b;
-      font-size: 13px;
-      margin-top: 40px;
+      font-size: 12px;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
 
-  <!-- ১. ব্যানার সেকশন -->
-  <div class="banner-container">
+  <!-- ১. ৮২০x৩৬০ ব্যানার সেকশন -->
+  <div class="banner-container" onclick="openBannerModal()">
     <img src="https://cdn.phototourl.com/member/2026-10-03-e2ea88e7-74bf-46f2-803b-97c339c4fcad.png" alt="Spark Finder Banner" class="banner-img">
   </div>
 
   <div class="container">
     
-    <!-- ২. অ্যাপের আইকন ও নাম -->
+    <!-- ২. ব্যানারের নিচে অ্যাপের আইকন ও নাম -->
     <div class="app-header">
       <img src="https://cdn.phototourl.com/member/2026-10-03-50d18f1d-337e-4367-a003-53da8c8f2a84.png" alt="Spark Finder Icon" class="app-icon">
       
@@ -255,7 +279,7 @@
         <div class="developer-tag">Developed by Tanvir Hossain</div>
         <div class="badge-list">
           <span class="badge">Version 1</span>
-          <span class="badge">Safe & Verified</span>
+          <span class="badge">Verified Safe</span>
           <span class="badge">Android 6.0+</span>
         </div>
       </div>
@@ -279,33 +303,33 @@
       </div>
     </div>
 
-    <!-- ৪. নিয়ম এবং পলিসি (Rules & Policy) -->
+    <!-- ৪. পলিসি সেকশন -->
     <div class="content-box">
       <h2 class="section-title">ব্যবহারের নিয়মাবলি ও পলিসি</h2>
       <ul class="policy-list">
         <li>এই অ্যাপটি শুধুমাত্র ব্যক্তিগত ব্যবহারের জন্য তৈরি করা হয়েছে।</li>
-        <li>অ্যাপ ইনস্টল করার সময় "Install from Unknown Sources" অপশনটি এনাবল করতে হতে পারে।</li>
+        <li>ইনস্টল করার সময় "Install from Unknown Sources" এনাবল করুন।</li>
         <li>কোনো প্রকার ব্যাকগ্রাউন্ড ডেটা চুরি বা অনৈতিক সুবিধা গ্রহণ করা হয় না।</li>
-        <li>অ্যাপটির যেকোনো আপডেট পেতে নিয়মিত আমাদের এই ওয়েবসাইট ভিজিট করুন।</li>
+        <li>নতুন আপডেট পেতে আমাদের ওয়েবসাইট ভিজিট রাখুন।</li>
       </ul>
     </div>
 
-    <!-- ৫. টিউটোরিয়াল সেকশন (How to use) -->
+    <!-- ৫. টিউটোরিয়াল সেকশন -->
     <div class="content-box">
-      <h2 class="section-title">কিভাবে অ্যাপটি ব্যবহার করবেন (টিউটোরিয়াল)</h2>
+      <h2 class="section-title">কিভাবে অ্যাপটি ইনস্টল করবেন</h2>
       
       <div class="step-list">
         <div class="step-item">
           <div class="step-number">১</div>
-          <div class="step-text">উপরে থাকা <strong>Download APK Directly</strong> বাটনে ক্লিক করে ফাইলটি ফোনে ডাউনলোড করুন।</div>
+          <div class="step-text">উপরে থাকা <strong>Download APK Directly</strong> বাটনে ক্লিক করুন।</div>
         </div>
         <div class="step-item">
           <div class="step-number">২</div>
-          <div class="step-text">ডাউনলোড শেষ হলে ফাইল ম্যানেজার থেকে APK ফাইলটিতে ট্যাপ করে <strong>Install</strong> নিশ্চিত করুন।</div>
+          <div class="step-text">ডাউনলোড শেষে ফাইলটিতে ট্যাপ করে <strong>Install</strong> সম্পন্ন করুন।</div>
         </div>
         <div class="step-item">
           <div class="step-number">৩</div>
-          <div class="step-text">Spark Finder অ্যাপটি ওপেন করে ব্যবহারের সুবিধাগুলো উপভোগ করুন।</div>
+          <div class="step-text">Spark Finder অ্যাপটি ওপেন করুন এবং ব্যবহার করা শুরু করুন।</div>
         </div>
       </div>
     </div>
@@ -315,6 +339,21 @@
     </footer>
 
   </div>
+
+  <!-- ব্যানার ফুল স্ক্রিনে দেখার পপআপ (Lightbox Modal) -->
+  <div id="bannerModal" class="modal" onclick="closeBannerModal()">
+    <span class="modal-close">&times;</span>
+    <img src="https://cdn.phototourl.com/member/2026-10-03-e2ea88e7-74bf-46f2-803b-97c339c4fcad.png" alt="Full Banner">
+  </div>
+
+  <script>
+    function openBannerModal() {
+      document.getElementById('bannerModal').style.display = 'flex';
+    }
+    function closeBannerModal() {
+      document.getElementById('bannerModal').style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
